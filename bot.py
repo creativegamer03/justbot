@@ -14,10 +14,12 @@ import aiohttp
 import json
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
 
 bot = commands.Bot("jb!")
 
-TOKEN = "NzE4MDQ1ODM2NTQ5ODE2Mzcy.XtnXsQ.N_gjmMJcSW8utjBVQrEVBDnXHY0"
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 ## Fact command
 @bot.command(name='fact',
